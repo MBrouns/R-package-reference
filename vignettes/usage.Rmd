@@ -1,0 +1,25 @@
+---
+title: "usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fibo)
+
+```
+
+
+```{r}
+fibo::fibo(5)
+```
