@@ -1,5 +1,17 @@
 #!/usr/local/bin/Rscript
 
+writeStdErr <- function(msg, handler, ...) {
+  if (length(list(...)) && "dry" %in% names(list(...))) {
+    handler$color_msg <- function(msg, level_name) msg
+    return(TRUE)
+  }
+
+  stopifnot(length(list(...)) > 0)
+
+  level_name <- list(...)[[1]]$levelname
+  msg <- handler$color_msg(msg, level_name)
+  cat(paste0(msg, "\n"), file = stderr())
+}
 
 if (sys.nframe() == 0){
   library(argparse)
@@ -17,7 +29,11 @@ if (sys.nframe() == 0){
     level <- "INFO"
   }
   logging::basicConfig(level = level)
-  logger <- logging::getLogger("fibo.cli")
+  logging::logReset()
+  logger <- logging::getLogger("fibo")
+
+  logger$addHandler(writeStdErr)
+
 
   plumber_file <- system.file("plumber", package = "fibo", mustWork = TRUE)
   logger$info("loading plumber api from %s", plumber_file)
