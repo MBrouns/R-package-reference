@@ -22,6 +22,6 @@ if (sys.nframe() == 0){
   plumber_file <- system.file("plumber", package = "fibo", mustWork = TRUE)
   logger$info("loading plumber api from %s", plumber_file)
 
-  plumber::plumb(dir = plumber_file)$run(port = args$port, swagger = FALSE, host = args$bind)
+  plumber::plumb(dir = plumber_file)$run(port = args$port, swagger = TRUE, host = args$bind)
 
 }
