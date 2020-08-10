@@ -34,6 +34,7 @@ function(a, b) {
   as.numeric(a) + as.numeric(b)
 }
 
+#* Calculate the nth fibo number
 #* @param n which fibonacci number we want
 #* @get /fibo
 function(n) {

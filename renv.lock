@@ -30,6 +30,13 @@
       "Repository": "CRAN",
       "Hash": "125dc7a0ed375eb68c0ce533b48d291f"
     },
+    "argparse": {
+      "Package": "argparse",
+      "Version": "2.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d9f8e85a0a6f80d68a13a45312d81a70"
+    },
     "assertthat": {
       "Package": "assertthat",
       "Version": "0.2.1",
@@ -99,6 +106,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "7fce217eaaf8016e72065e85c73027b5"
+    },
+    "findpython": {
+      "Package": "findpython",
+      "Version": "1.0.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2c2c86e63e98392922c67084b6f0e87d"
     },
     "glue": {
       "Package": "glue",

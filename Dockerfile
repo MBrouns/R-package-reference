@@ -7,6 +7,6 @@ RUN Rscript -e "renv::init()"
 RUN Rscript -e "renv::restore()"
 COPY . .
 RUN Rscript -e "install.packages('.', repos = NULL, type='source')"
-RUN chmod +x cli.R
+RUN chmod +x R/cli.R
 
-CMD ["./cli.R"]
+CMD ["./R/cli.R", "--bind", "0.0.0.0"]

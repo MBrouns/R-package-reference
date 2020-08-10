@@ -5,8 +5,8 @@ logger <- logging::getLogger('fibo.fibo')
 #' @param n
 #'
 #' @return the nth fibonacci number
-#' @export
 #'
+#' @expose
 #' @examples
 #' fibo(6)
 #'
